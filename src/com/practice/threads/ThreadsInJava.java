@@ -1,0 +1,40 @@
+package com.practice.threads;
+class UserThread1 extends Thread
+{
+    @Override
+    public void run()
+    {
+        System.out.println("This is a user thread.....");
+    }
+}
+ 
+class DaemonThread extends Thread
+{
+    public DaemonThread()
+    {
+        setDaemon(true);
+    }
+ 
+    @Override
+    public void run()
+    {
+        for(int i = 0; i < 1000; i++)
+        {
+            System.out.println("This is daemon thread....."+i);
+        }
+    }
+}
+ 
+public class ThreadsInJava
+{
+    public static void main(String[] args)
+    {
+        DaemonThread daemon = new DaemonThread();   //Creating the DaemonThread
+ 
+        daemon.start();                 //Starting the daemon thread
+ 
+        UserThread1 userThread = new UserThread1();   //Creating the UserThread
+ 
+        userThread.start();          //Starting the user thread
+    }
+}
