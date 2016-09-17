@@ -3,11 +3,9 @@ package com.practice.ds;
 public class FindKthLargestElement {
     public static Node root;
     private static int counter;
-
     public FindKthLargestElement() {
         this.root = null;
     }
-
     public void insert(int id) {
         Node newNode = new Node(id);
         if (root == null) {

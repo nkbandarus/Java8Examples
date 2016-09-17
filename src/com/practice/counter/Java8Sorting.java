@@ -1,9 +1,11 @@
-package com.practice;
+package com.practice.counter;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.practice.Menu;
 
 public class Java8Sorting {
 
